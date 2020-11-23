@@ -19,13 +19,9 @@ steps:
   displayName: 'Run a multi-line script'
 - task: Application security testing@2020
   inputs:
-    projectName: 'P2_Yaml2'
+    projectName: 'P2_Yaml2_sca'
     enableProxy: false
-    enableSastScan: true
-    CheckmarxService: 'cli 8.88'
-    fullTeamName: '\CxServer'
-    incScan: false
-    forceScan: false
+    enableSastScan: false
     enableDependencyScan: true
     dependencyServerURL: 'rihan sca'
     dependencyTenant: 'plugins'
