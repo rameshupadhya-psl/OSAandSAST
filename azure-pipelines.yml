@@ -20,12 +20,12 @@ steps:
 - task: Application security testing@2020
   inputs:
     projectName: 'P2_Yaml2'
-    enableProxy: true
+    enableProxy: false
     enableSastScan: true
     CheckmarxService: 'cli 8.88'
     fullTeamName: '\CxServer'
     incScan: false
-    forceScan: true
+    forceScan: false
     enableDependencyScan: true
     dependencyServerURL: 'rihan sca'
     dependencyTenant: 'plugins'
