@@ -24,6 +24,5 @@ steps:
     enableProxy: false
     enableSastScan: true
     CheckmarxService: '8.88-sast93'
-    customPreset: 'ttt'
     fullTeamName: '\CxServer'
     enableDependencyScan: false
