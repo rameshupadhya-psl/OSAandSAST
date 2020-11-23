@@ -20,7 +20,7 @@ steps:
   
 - task: Application security testing@2020
   inputs:
-    projectName: 'myprojecta__mybrancha'
+    projectName: 'myprojecta'
     syncMode: true
     enableSastScan: false
     enableDependencyScan: true
