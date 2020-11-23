@@ -19,8 +19,8 @@ steps:
   displayName: 'Run a multi-line script'
 - task: Application security testing@2020
   inputs:
-    projectName: 'P2Yaml2sca'
-    enableProxy: false
+    projectName: 'myproject__mybranch'
+    syncMode: true
     enableSastScan: false
     enableDependencyScan: true
     dependencyServerURL: 'rihan sca'
