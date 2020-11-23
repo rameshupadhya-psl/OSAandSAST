@@ -20,9 +20,10 @@ steps:
   
 - task: Application security testing@2020
   inputs:
-    projectName: 'myprojecta'
-    syncMode: true
-    enableSastScan: false
-    enableDependencyScan: true
-    dependencyServerURL: 'rihan sca'
-    dependencyTenant: 'plugins'
+    projectName: 'ccc'
+    enableProxy: false
+    enableSastScan: true
+    CheckmarxService: '8.88-sast93'
+    customPreset: 'ttt'
+    fullTeamName: '\CxServer'
+    enableDependencyScan: false
