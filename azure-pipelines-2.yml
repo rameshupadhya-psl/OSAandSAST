@@ -1,0 +1,38 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+- task: Application security testing@2020
+  inputs:
+    projectName: 'P1'
+    enableProxy: true
+    enableSastScan: true
+    CheckmarxService: 'cli 8.88'
+    fullTeamName: '\CxServer'
+    incScan: false
+    forceScan: true
+    vulnerabilityThreshold: true
+    high: '10'
+    medium: '20'
+    enableDependencyScan: true
+    dependencyServerURL: 'rihan sca'
+    dependencyTenant: 'plugins'
+    scaVulnerabilityThreshold: true
+    scaHigh: '20'
+    scaMedium: '10'
+    scaLow: '7'
