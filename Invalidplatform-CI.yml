@@ -1,0 +1,23 @@
+resources:
+  repositories:
+  - repository: self
+    type: git
+    ref: master
+jobs:
+- job: Job_1
+  displayName: Agent job 1
+  pool:
+    name: Default
+  steps:
+  - checkout: self
+    clean: true
+  - task: Application security testing@2021
+    displayName: Application security testing
+    inputs:
+      projectName: InvalidPlatform
+      CheckmarxService: 84ca6cc5-a0a1-495b-bb6c-128e71285b2a
+      fullTeamName: CxServer
+      fullScansScheduled: false
+      enableDependencyScan: true
+      dependencyServerURL: 50e4db75-e50a-4174-be2a-13ed4ca21cd5
+...
